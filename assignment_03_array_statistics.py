@@ -39,3 +39,33 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def get_sum(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+def get_average(numbers):
+    total = get_sum(numbers)
+    count = len(numbers)
+    if count == 0:
+        return 0
+    return total / count
+
+def get_maximum(numbers):
+    if not numbers:
+        return None
+    max_num = numbers[0]
+    for num in numbers:
+        if num > max_num:
+            max_num = num
+    return max_num
+
+def get_minimum(numbers):
+    if not numbers:
+        return None
+    min_num = numbers[0]
+    for num in numbers:
+        if num < min_num:
+            min_num = num
+    return min_num
